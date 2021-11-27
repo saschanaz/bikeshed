@@ -50,7 +50,7 @@ jobs:
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip wheel pipenv
-        pipenv install
+        pipenv install --dev
         pip install -r .github/workflows/update-tests/requirements.txt
     - name: Lint with flake8
       run: |

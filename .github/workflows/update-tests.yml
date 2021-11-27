@@ -14,8 +14,9 @@ jobs:
         python-version: 3.8
     - name: install dependencies
       run: |
+        pip install --upgrade pip wheel pipenv
         pip install -r .github/workflows/update-tests/requirements.txt
-        pip install --editable .
+        pipenv install
         bikeshed update
     - name: update tests
       env:
