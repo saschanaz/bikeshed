@@ -1,5 +1,0 @@
--r requirements.txt
--e ./
-
-flake8==4.0.1
-pylint==2.9.5

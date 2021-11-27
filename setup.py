@@ -4,8 +4,6 @@ with open("README.md") as fh:
     long_description = fh.read()
 with open("semver.txt") as fh:
     semver = fh.read().strip()
-with open("requirements.txt") as fh:
-    install_requires = [x.strip() for x in fh.read().strip().split("\n")]
 
 setup(
     name="bikeshed",
@@ -17,7 +15,6 @@ setup(
     url="https://github.com/tabatkins/bikeshed/",
     packages=find_packages(),
     include_package_data=True,
-    install_requires=install_requires,
     python_requires=">=3.7",
     classifiers=[
         "Development Status :: 5 - Production/Stable",
